@@ -1,0 +1,20 @@
+using NUnit.Framework;
+namespace TDDFun
+{
+public class StringCalculatorTest
+    {
+private StringCalculator calculator;       
+  public void SetUp()
+        {
+            calculator = new StringCalculator();
+        }
+  public void Add_DecimalNumbers_ShouldReturnDouble()
+        {
+          Assert.IsTrue(calculator.Add(â€œ//;\n1.1;1.2â€³) == 2.3);
+        }
+  public void Add_EmptyString_ShouldReturnZero()
+        {
+          Assert.IsTrue(calculator.Add(string.Empty) == 0);
+        }
+    }
+}
